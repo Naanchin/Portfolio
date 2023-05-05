@@ -1,43 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body{
     margin: 0;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 /* styling the header */
-.header{
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
-}
-.header a{
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
+header a{
     text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-    margin: 10px;
 }
-.header a.logo{
-    border: solid dodgerblue 1px;
-    font-size: 25px;
-    font-weight: bold;
+header{
+    padding: 0 20px;
+    background-color: lightgray;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
-.header a.active{
-    background-color: dodgerblue;
-    color:white;
-}
-.header-right{
-    float: right;
-}
-.header-right a:hover{
-    background-color: black;
+.active{
     color: white;
-    transition: 0.5s;
-    padding: 10px;
 }
+.logo a{
+    color: dodgerblue;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 10px;
+}
+ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ul a{
+    color: black;
+}
+ul li{
+    padding: 5px;
+    margin-left: 10px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+}
+ul li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
 /* styling my image */
 img{
     display: block;
@@ -143,22 +156,7 @@ footer{
     background-color: aqua;
     font-size: 25px;
 }
-/* .project{
-    background-color: lightgray;
-    text-align: center;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    padding: 10px;
-    border: 4px solid dodgerblue;
-    border-radius: 15px;
-    font-family: cursive;
-}
-.project:hover{
-    background-color: skyblue;
-    color: white;
-} */
+
 .bt{
     color: black;
     text-decoration: none;
@@ -180,7 +178,8 @@ footer{
     background-color: lightgray;
     border: 2px solid dodgerblue;
     border-radius: 10px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 80%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -226,12 +225,34 @@ input:hover{
 }
 .contact-links a:hover{
     color: burlywood;
+    transform: scale(1.1);
     
 }
 
 /* mobile view */
-@media screen and (max-width: 620px){
-   .header, footer, body, .flexbox {
-    width:100%
-   } 
+@media only screen and (max-width: 600px) {
+    header nav{
+        display: flex;
+        background-color: dodgerblue;
+    }
+    .bg{
+        width: 300px;
+        height: 300x;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .flexbox, .about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about{
+        width: 300px;
+    }
+    .flex-item{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        width: 200px;
+        font-size: 10px;
+    }
 }
